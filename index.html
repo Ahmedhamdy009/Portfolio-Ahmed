@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ahmed Hamdy | WordPress &amp; Frontend Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- SEO & Author Metadata -->
+  <meta name="author" content="Ahmed Hamdy">
+  <meta name="theme-color" content="#F59E0B">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Ahmed Hamdy — WordPress &amp; Frontend Developer. Building fast, modern, and high-converting websites, bespoke WooCommerce stores, and responsive web applications.">
+  <meta name="keywords" content="Ahmed Hamdy, WordPress Developer, Frontend Developer, WooCommerce, Elementor Pro, Web Design, Speed Optimization, Core Web Vitals, SEO, Cairo, Egypt">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahmed-hamdy09.vercel.app/">
+  <meta property="og:title" content="Ahmed Hamdy | WordPress &amp; Frontend Developer">
+  <meta property="og:description" content="Building fast, modern, and high-converting WordPress websites, custom frontend architectures, and WooCommerce stores.">
+  <meta property="og:image" content="https://ahmed-hamdy09.vercel.app/assets/portrait.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AhmedHa16224863">
+  <meta name="twitter:title" content="Ahmed Hamdy | WordPress &amp; Frontend Developer">
+  <meta name="twitter:description" content="Crafting fast, clean, and modern digital experiences. WordPress, WooCommerce, and Frontend development.">
+  <meta name="twitter:image" content="https://ahmed-hamdy09.vercel.app/assets/portrait.jpg">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Hamdy",
+    "jobTitle": "WordPress & Frontend Developer",
+    "url": "https://ahmed-hamdy09.vercel.app/",
+    "image": "assets/portrait.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/ahmed-hamdy-b1620a392",
+      "https://github.com/Ahmedhamdy009",
+      "https://x.com/AhmedHa16224863",
+      "https://www.facebook.com/61565314121039",
+      "https://www.instagram.com/ahmed_hamdy_09"
+    ],
+    "knowsAbout": [
+      "WordPress Development",
+      "WooCommerce",
+      "Elementor Pro",
+      "Frontend Development",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Core Web Vitals",
+      "Technical SEO"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Sora (Headings), Manrope (Body UI), Alexandria (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Design System & Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css?v=3.0">
+  <link rel="stylesheet" href="css/components.css?v=3.0">
+  <link rel="stylesheet" href="css/main.css?v=3.0">
+  <link rel="stylesheet" href="css/enhancements.css?v=3.0">
+  <link rel="stylesheet" href="css/rtl.css?v=3.0">
+</head>
+
+<body>
+  <!-- Ambient background glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       1. STICKY HEADER & NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <!-- Brand Logo Lockup -->
+      <a href="#hero" class="brand-link" aria-label="Ahmed Hamdy Home">
+        <img src="assets/monogram.svg" alt="AH Monogram" class="brand-monogram-img" id="brandMonogram" width="40" height="40">
+        <div class="brand-text-block">
+          <span class="brand-name">AHMED HAMDY</span>
+          <span class="brand-tagline">WORDPRESS &amp; FRONTEND</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="desktopNav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-item active" data-i18n="navHome">الرئيسية</a>
+        <a href="#about" class="nav-item" data-i18n="navAbout">نبذة عني</a>
+        <a href="#services" class="nav-item" data-i18n="navServices">الخدمات</a>
+        <a href="#projects" class="nav-item" data-i18n="navProjects">المشاريع</a>
+        <a href="#skills" class="nav-item" data-i18n="navSkills">المهارات</a>
+        <a href="#process" class="nav-item" data-i18n="navProcess">منهجية العمل</a>
+        <a href="#contact" class="nav-item" data-i18n="navContact">تواصل معي</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button class="icon-control-btn" id="langToggle" type="button" onclick="toggleLanguage()" aria-label="Toggle Language" title="Switch Language">
+          <span class="lang-toggle-text">EN</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button class="icon-control-btn" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fa-solid fa-sun theme-toggle-icon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Primary CTA Button (Desktop) -->
+        <a href="#contact" class="btn btn-primary btn-sm d-none-mobile">
+          <i class="fa-solid fa-paper-plane rtl-flip"></i>
+          <span data-i18n="navHireCta">ابدأ مشروعك</span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" id="mobileToggleBtn" type="button" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <a href="#hero" class="mobile-nav-item" data-i18n="navHome">الرئيسية</a>
+    <a href="#about" class="mobile-nav-item" data-i18n="navAbout">نبذة عني</a>
+    <a href="#services" class="mobile-nav-item" data-i18n="navServices">الخدمات</a>
+    <a href="#projects" class="mobile-nav-item" data-i18n="navProjects">المشاريع</a>
+    <a href="#skills" class="mobile-nav-item" data-i18n="navSkills">المهارات</a>
+    <a href="#process" class="mobile-nav-item" data-i18n="navProcess">منهجية العمل</a>
+    <a href="#contact" class="mobile-nav-item" data-i18n="navContact">تواصل معي</a>
+    <div style="display: flex; gap: var(--space-3); margin-top: var(--space-4);">
+      <button class="icon-control-btn" id="mobileLangToggle" type="button" onclick="toggleLanguage()" style="flex: 1; height: 44px;" aria-label="Toggle Language">
+        <span class="lang-toggle-text">EN</span>
+      </button>
+      <button class="icon-control-btn" id="mobileThemeToggle" type="button" onclick="toggleTheme()" style="flex: 1; height: 44px;" aria-label="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-sun theme-toggle-icon" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div style="margin-top: var(--space-3);">
+      <a href="#contact" class="btn btn-primary mobile-drawer-cta" style="width: 100%;">
+        <i class="fa-solid fa-paper-plane rtl-flip"></i>
+        <span data-i18n="navHireCta">ابدأ مشروعك</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Column -->
+          <div class="hero-text-col">
+            <div class="hero-eyebrow">
+              <span class="badge badge-accent">
+                <i class="fa-solid fa-code"></i>
+                <span data-i18n="heroEyebrow">مطور ووردبريس وواجهات أمامية</span>
+              </span>
+            </div>
+
+            <h1 class="hero-headline">
+              <span data-i18n="heroTitlePrefix">بناء مواقع سريعة، عصرية، و</span>
+              <span class="text-gradient-accent" data-i18n="heroTitleHighlight">عالية التحويل.</span>
+            </h1>
+
+            <!-- Animated Role Typewriter -->
+            <div class="hero-typewriter-wrap" aria-label="مؤشر دور وظيفي متغير">
+              <i class="fa-solid fa-terminal text-accent" aria-hidden="true"></i>
+              <span id="typewriterText" aria-live="polite"></span>
+              <span class="cursor-blink" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero-lead" data-i18n="heroLead">
+              أساعد أصحاب الأعمال والشركات على بناء مواقع ووردبريس مخصصة ومتاجر إلكترونية سريعة الاستجابة، تجمع بين الكود النظيف، الأداء الصاروخي، والتصميم الذي يحول الزوار إلى عملاء فعليين.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-briefcase"></i>
+                <span data-i18n="heroCtaPrimary">استكشف أعمالي</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-lg">
+                <i class="fa-solid fa-paper-plane rtl-flip"></i>
+                <span data-i18n="heroCtaSecondary">ابدأ مشروعك الآن</span>
+              </a>
+              <a href="Ahmed_Hamdy_CV.pdf" download="Ahmed_Hamdy_CV.pdf" class="btn btn-outline btn-lg" aria-label="Download Ahmed Hamdy CV">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-i18n="heroCtaCv">تحميل السيرة الذاتية</span>
+              </a>
+            </div>
+
+            <!-- Credibility Stats Ribbon -->
+            <div class="hero-stats-ribbon">
+              <div class="stat-item">
+                <span class="stat-number" data-i18n="stat1Number">+3</span>
+                <span class="stat-label" data-i18n="stat1Label">سنوات خبرة في التطوير</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-i18n="stat2Number">+18</span>
+                <span class="stat-label" data-i18n="stat2Label">مشروعاً رقمياً مكتملًا</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-i18n="stat3Number">98%</span>
+                <span class="stat-label" data-i18n="stat3Label">معدل سرعة Google PageSpeed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-i18n="stat4Number">100%</span>
+                <span class="stat-label" data-i18n="stat4Label">توافق مع الشاشات ومحركات البحث</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait Visual Presentation -->
+          <div class="hero-visual-col">
+            <div class="portrait-frame-wrap">
+              <div class="portrait-glow-halo" aria-hidden="true"></div>
+              <div class="portrait-inner-frame">
+                <img src="assets/portrait.jpg" 
+                     alt="Ahmed Hamdy — WordPress &amp; Frontend Developer" 
+                     class="portrait-img" 
+                     width="500" 
+                     height="500" 
+                     fetchpriority="high">
+              </div>
+
+              <!-- Floating Pro Badge -->
+              <div class="floating-hero-badge">
+                <div class="floating-hero-badge-icon">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="floating-hero-badge-text">
+                  <strong data-i18n="heroBadgeTitle">تطوير احترافي</strong>
+                  <span data-i18n="heroBadgeSub">معايير الأداء والسرعة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT SECTION
+         ========================================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="about-two-col">
+          <!-- Visual & Values Column -->
+          <div class="about-visual-side reveal-on-scroll">
+            <div class="about-card-box">
+              <div class="badge badge-accent" style="margin-bottom: var(--space-4);">
+                <i class="fa-solid fa-compass-drafting"></i>
+                <span data-i18n="aboutEyebrow">نبذة مهنية</span>
+              </div>
+              <blockquote class="about-quote" data-i18n="aboutQuote">
+                "الموقع الناجح ليس مجرد شكل جمالي؛ بل هو توازن هندسي بين السرعة الفائقة، الكود النظيف، وسهولة الإدارة للعميل."
+              </blockquote>
+
+              <div class="about-badges-grid">
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span data-i18n="badgePerf">أداء فائق وسرعة</span>
+                </div>
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-code"></i>
+                  <span data-i18n="badgeCleanCode">كود معياري نظيف</span>
+                </div>
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i>
+                  <span data-i18n="badgeSEO">تهيئة محركات البحث</span>
+                </div>
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <span data-i18n="badgeResponsive">تجاوب كامل 100%</span>
+                </div>
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span data-i18n="badgeUX">تركيز على التحويل UX</span>
+                </div>
+                <div class="about-feature-chip">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span data-i18n="badgeMaintainable">سهولة التخصيص والإدارة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Bio Column -->
+          <div class="about-content-side reveal-on-scroll">
+            <div class="section-header">
+              <span class="section-eyebrow" data-i18n="aboutEyebrow">نبذة مهنية</span>
+              <h2 class="section-title" data-i18n="aboutTitle">شغف بالدقة التقنية وتجربة المستخدم الراقية</h2>
+            </div>
+
+            <p class="about-bio-paragraph" data-i18n="aboutBio1">
+              أنا أحمد حمدي، مطور ووردبريس ومطور واجهات أمامية متخصص في تحويل متطلبات الأعمال والتصاميم الإبداعية إلى مواقع ويب تفاعلية عالية الكفاءة. أركز بشكل محوري على حلول ووردبريس المخصصة، قوالب Elementor الاحترافية، ومتاجر WooCommerce المتكاملة.
+            </p>
+
+            <p class="about-bio-paragraph" data-i18n="aboutBio2">
+              أتبع نهجاً يضع الأداء (Performance-First) ومعايير محركات البحث (SEO-Friendly) في صميم كل سطر برمجي، مع الحرص التام على تسليم لوحة تحكم سهلة الاستخدام تمكّن العميل من إدارة محتواه دون أي تعقيد تقني.
+            </p>
+
+            <div class="about-actions-row">
+              <a href="Ahmed_Hamdy_CV.pdf" download="Ahmed_Hamdy_CV.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-i18n="heroCtaCv">تحميل السيرة الذاتية</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane rtl-flip"></i>
+                <span data-i18n="heroCtaSecondary">ابدأ مشروعك الآن</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. CORE SERVICES SECTION (8 Services)
+         ========================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="servicesEyebrow">ما أقدمه</span>
+          <h2 class="section-title" data-i18n="servicesTitle">خدمات متخصصة تدفع أعمالك إلى الأمام</h2>
+          <p class="section-desc" data-i18n="servicesDesc">
+            حلول برمجية متكاملة تبدأ من التخطيط والتصميم وحتى الإطلاق والصيانة الشاملة بأعلى المعايير العالمية.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Custom WordPress -->
+          <article class="service-card reveal-on-scroll" data-service-type="Custom WordPress Website">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <span class="service-index">01</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv1Title">تطوير مواقع ووردبريس مخصصة</h3>
+            <p class="service-desc" data-i18n="srv1Desc">بناء مواقع ووردبريس مخصصة من الصفر وقوالب برمجية سريعة وخفيفة مهيأة خصيصاً لهوية عملك.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv1Tag1">ووردبريس مخصص</span>
+              <span class="service-tag" data-i18n="srv1Tag2">حقول مخصصة ACF</span>
+              <span class="service-tag" data-i18n="srv1Tag3">أداء فائق</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 2. WooCommerce -->
+          <article class="service-card reveal-on-scroll" data-service-type="WooCommerce Store">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <span class="service-index">02</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv2Title">متاجر WooCommerce الإلكترونية</h3>
+            <p class="service-desc" data-i18n="srv2Desc">متاجر إلكترونية متكاملة مع بوابات دفع آمنة، حسابات شحن دقيقة، وتجربة شراء سلسة ترفع معدلات البيع.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv2Tag1">ووكومرس</span>
+              <span class="service-tag" data-i18n="srv2Tag2">بوابات الدفع</span>
+              <span class="service-tag" data-i18n="srv2Tag3">مسار التحويل</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 3. Elementor Pro -->
+          <article class="service-card reveal-on-scroll" data-service-type="Elementor Pro Design">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <span class="service-index">03</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv3Title">تصميم احترافي بـ Elementor Pro</h3>
+            <p class="service-desc" data-i18n="srv3Desc">تطبيق تصاميم عصرية باستخدام Elementor Pro مع كود CSS مخصص لتحقيق مظهر متميز وأداء سريع دون بطء.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv3Tag1">Elementor Pro</span>
+              <span class="service-tag" data-i18n="srv3Tag2">ودجات مخصصة</span>
+              <span class="service-tag" data-i18n="srv3Tag3">تحكم كامل</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 4. Website Redesign -->
+          <article class="service-card reveal-on-scroll" data-service-type="Website Redesign">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <span class="service-index">04</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv4Title">إعادة تصميم وتحديث المواقع</h3>
+            <p class="service-desc" data-i18n="srv4Desc">تحويل موقعك القديم إلى واجهة رقمية عصرية بهوية قوية وسرعة استجابة تضاعف تفاعل الزوار وثقتهم.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv4Tag1">تحديث UI/UX</span>
+              <span class="service-tag" data-i18n="srv4Tag2">مضاعفة السرعة</span>
+              <span class="service-tag" data-i18n="srv4Tag3">زيادة التحويل</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 5. Performance Optimization -->
+          <article class="service-card reveal-on-scroll" data-service-type="Speed & Performance Optimization">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <span class="service-index">05</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv5Title">تسريع الأداء و Core Web Vitals</h3>
+            <p class="service-desc" data-i18n="srv5Desc">تحسين سرعة التحميل للوصول إلى 95+ على Google PageSpeed، ضغط الصور وتفعيل التخزين المؤقت المتقدم.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv5Tag1">Core Web Vitals</span>
+              <span class="service-tag" data-i18n="srv5Tag2">تقييم +95</span>
+              <span class="service-tag" data-i18n="srv5Tag3">كاش متطور</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 6. Technical SEO -->
+          <article class="service-card reveal-on-scroll" data-service-type="Technical SEO">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="service-index">06</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv6Title">تهيئة محركات البحث (Technical SEO)</h3>
+            <p class="service-desc" data-i18n="srv6Desc">بناء هيكلية كود نظيفة ومطابقة لبيانات Schema.org و Meta Tags لضمان ظهور موقعك في صدارة نتائج Google.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv6Tag1">بيانات Schema</span>
+              <span class="service-tag" data-i18n="srv6Tag2">هيكلية السيو</span>
+              <span class="service-tag" data-i18n="srv6Tag3">أرشفة Google</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 7. Figma to WordPress -->
+          <article class="service-card reveal-on-scroll" data-service-type="Figma to WordPress">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <span class="service-index">07</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv7Title">تحويل Figma إلى ووردبريس</h3>
+            <p class="service-desc" data-i18n="srv7Desc">تحويل ملفات Figma و XD بدقة Pixel-Perfect إلى مواقع ووردبريس حية وقابلة للتعديل بسهولة بالغة.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv7Tag1">Figma to WP</span>
+              <span class="service-tag" data-i18n="srv7Tag2">دقة بكسل-بيرفكت</span>
+              <span class="service-tag" data-i18n="srv7Tag3">تجاوب كامل</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+
+          <!-- 8. Responsive Design & Frontend -->
+          <article class="service-card reveal-on-scroll" data-service-type="Custom Frontend Development">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <span class="service-index">08</span>
+            </div>
+            <h3 class="service-title" data-i18n="srv8Title">تصميم وتطوير الواجهات التفاعلية</h3>
+            <p class="service-desc" data-i18n="srv8Desc">تطوير واجهات مستخدم مخصصة باستخدام HTML5 و CSS3 الحديثة و JavaScript مع تجربة فائقة السلاسة على جميع الأجهزة.</p>
+            <div class="service-tags">
+              <span class="service-tag" data-i18n="srv8Tag1">تجاوب شامل</span>
+              <span class="service-tag" data-i18n="srv8Tag2">تفاعل سلس</span>
+              <span class="service-tag" data-i18n="srv8Tag3">سهولة الوصول</span>
+            </div>
+            <span class="service-cta-link">
+              <span data-i18n="srvDetailsLink">عرض التفاصيل والمخرجات</span>
+              <i class="fa-solid fa-arrow-left rtl-flip"></i>
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. PORTFOLIO / CASE STUDIES SECTION
+         ========================================================================== -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="portfolioEyebrow">سابقة الأعمال</span>
+          <h2 class="section-title" data-i18n="portfolioTitle">مشاريع عملية تثبت الكفاءة والأثر</h2>
+          <p class="section-desc" data-i18n="portfolioDesc">
+            نماذج حقيقية من المواقع التي قمت بتطويرها مع استعراض المشكلة والحل والنتائج التقنية المحققة.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar reveal-on-scroll" role="tablist">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">كافة المشاريع</button>
+          <button class="filter-btn" data-filter="wordpress" data-i18n="filterWordpress">ووردبريس</button>
+          <button class="filter-btn" data-filter="woocommerce" data-i18n="filterWooCommerce">ووكومرس</button>
+          <button class="filter-btn" data-filter="websites" data-i18n="filterWebsites">مواقع متكاملة</button>
+          <button class="filter-btn" data-filter="landing-pages" data-i18n="filterLanding">صفحات هبوط</button>
+          <button class="filter-btn" data-filter="frontend" data-i18n="filterFrontend">واجهات أمامية</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Injected via JavaScript from js/projects-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. SKILLS SECTION
+         ========================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="skillsEyebrow">الترسانة التقنية</span>
+          <h2 class="section-title" data-i18n="skillsTitle">أدوات وبيئة عمل احترافية موثوقة</h2>
+          <p class="section-desc" data-i18n="skillsDesc">
+            أعتمد على تقنيات معيارية مستقرة تضمن لمشروعك أعلى مستويات الأمان والسرعة وقابلية التوسع.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Cluster 1: Frontend Development -->
+          <div class="skill-cluster-card reveal-on-scroll">
+            <div class="skill-cluster-header">
+              <div class="skill-cluster-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="skill-cluster-title" data-i18n="skillCluster1">تطوير الواجهات (Frontend)</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-brands fa-html5 text-accent"></i> HTML5 Semantic</span>
+              <span class="skill-pill"><i class="fa-brands fa-css3-alt text-accent"></i> Modern CSS3 &amp; Grid</span>
+              <span class="skill-pill"><i class="fa-brands fa-js text-accent"></i> JavaScript (ES6+)</span>
+              <span class="skill-pill"><i class="fa-brands fa-react text-accent"></i> React.js</span>
+              <span class="skill-pill"><i class="fa-solid fa-mobile-screen-button text-accent"></i> Responsive UI</span>
+              <span class="skill-pill"><i class="fa-solid fa-universal-access text-accent"></i> WCAG Accessibility</span>
+            </div>
+          </div>
+
+          <!-- Cluster 2: WordPress & CMS -->
+          <div class="skill-cluster-card reveal-on-scroll">
+            <div class="skill-cluster-header">
+              <div class="skill-cluster-icon">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <h3 class="skill-cluster-title" data-i18n="skillCluster2">ووردبريس وإدارة المحتوى (CMS)</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-brands fa-wordpress text-accent"></i> WordPress Core</span>
+              <span class="skill-pill"><i class="fa-solid fa-layer-group text-accent"></i> Elementor Pro</span>
+              <span class="skill-pill"><i class="fa-solid fa-cart-shopping text-accent"></i> WooCommerce</span>
+              <span class="skill-pill"><i class="fa-solid fa-cubes text-accent"></i> Custom Post Types (CPT)</span>
+              <span class="skill-pill"><i class="fa-solid fa-sliders text-accent"></i> Advanced Custom Fields (ACF)</span>
+              <span class="skill-pill"><i class="fa-solid fa-palette text-accent"></i> Custom Child Themes</span>
+            </div>
+          </div>
+
+          <!-- Cluster 3: Performance & SEO -->
+          <div class="skill-cluster-card reveal-on-scroll">
+            <div class="skill-cluster-header">
+              <div class="skill-cluster-icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <h3 class="skill-cluster-title" data-i18n="skillCluster3">الأداء وسرعة التحميل (Performance)</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-solid fa-bolt text-accent"></i> Core Web Vitals</span>
+              <span class="skill-pill"><i class="fa-solid fa-rocket text-accent"></i> PageSpeed 95+</span>
+              <span class="skill-pill"><i class="fa-solid fa-file-image text-accent"></i> WebP/AVIF Compression</span>
+              <span class="skill-pill"><i class="fa-solid fa-memory text-accent"></i> Advanced Caching</span>
+              <span class="skill-pill"><i class="fa-solid fa-magnifying-glass text-accent"></i> Technical SEO</span>
+              <span class="skill-pill"><i class="fa-solid fa-sitemap text-accent"></i> Schema.org Structured Data</span>
+            </div>
+          </div>
+
+          <!-- Cluster 4: Workflow & Tools -->
+          <div class="skill-cluster-card reveal-on-scroll">
+            <div class="skill-cluster-header">
+              <div class="skill-cluster-icon">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <h3 class="skill-cluster-title" data-i18n="skillCluster4">الأدوات وبيئة العمل (Workflow)</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fa-brands fa-git-alt text-accent"></i> Git &amp; Version Control</span>
+              <span class="skill-pill"><i class="fa-brands fa-github text-accent"></i> GitHub</span>
+              <span class="skill-pill"><i class="fa-brands fa-figma text-accent"></i> Figma</span>
+              <span class="skill-pill"><i class="fa-brands fa-npm text-accent"></i> NPM Packages</span>
+              <span class="skill-pill"><i class="fa-brands fa-chrome text-accent"></i> Chrome DevTools</span>
+              <span class="skill-pill"><i class="fa-solid fa-server text-accent"></i> cPanel &amp; DNS Setup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. WORK PROCESS SECTION (01 — 06)
+         ========================================================================== -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="processEyebrow">كيف أعمل</span>
+          <h2 class="section-title" data-i18n="processTitle">منهجية واضحة ومدروسة من الفكرة للإطلاق</h2>
+          <p class="section-desc" data-i18n="processDesc">
+            خطوات شفافة تضمن تسليم موقعك في الموعد المحدد وبأعلى معايير الجودة التقنية.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <!-- Step 1 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step1Num">01</span>
+              <i class="fa-solid fa-comments text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step1Title">الاكتشاف وفهم المتطلبات</h3>
+            <p class="process-step-desc" data-i18n="step1Desc">تحليل طبيعة عملك، أهدافك التجارية، الفئة المستهدفة، وتحديد المتطلبات الفنية والوظيفية للموقع بدقة.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step2Num">02</span>
+              <i class="fa-solid fa-diagram-project text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step2Title">التخطيط وتجربة المستخدم</h3>
+            <p class="process-step-desc" data-i18n="step2Desc">رسم هيكلية الصفحات (Wireframing)، مسار رحلة الزائر، وتنظيم المحتوى وقواعد البيانات لضمان تجربة سلسة.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step3Num">03</span>
+              <i class="fa-solid fa-pen-ruler text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step3Title">التصميم والواجهات التفاعلية</h3>
+            <p class="process-step-desc" data-i18n="step3Desc">صياغة هوية بصرية متميزة متوافقة مع علامتك التجارية وتناسب العرض المتجاوب على جميع مقاسات الشاشات.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step4Num">04</span>
+              <i class="fa-solid fa-code text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step4Title">التطوير والبرمجة النظيفة</h3>
+            <p class="process-step-desc" data-i18n="step4Desc">بناء الموقع بأكواد معيارية سريعة وخفيفة، وتكامل قوالب ووردبريس أو Elementor Pro مع لوحة تحكم سهلة.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step5Num">05</span>
+              <i class="fa-solid fa-gauge-simple-high text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step5Title">تسريع الأداء وفحص SEO</h3>
+            <p class="process-step-desc" data-i18n="step5Desc">ضغط الوسائط، فحص Core Web Vitals، تطبيق بيانات Schema.org، والتأكد من الأمان والتوافق عبر المتصفحات.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="process-card reveal-on-scroll">
+            <div class="process-number">
+              <span data-i18n="step6Num">06</span>
+              <i class="fa-solid fa-rocket text-accent" style="font-size: 1.25rem;"></i>
+            </div>
+            <h3 class="process-step-title" data-i18n="step6Title">الإطلاق والتدريب والدعم</h3>
+            <p class="process-step-desc" data-i18n="step6Desc">نقل الموقع للاستضافة الحية، تقديم فيديو تدريبي يشرح كيفية إدارة وتحديث الموقع، ودعم فني مستمر.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. WHY WORK WITH ME (TRUST PILLARS)
+         ========================================================================== -->
+    <section class="section" id="why-me">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="whyEyebrow">لماذا تختارني؟</span>
+          <h2 class="section-title" data-i18n="whyTitle">معايير تضمن نجاح استثمارك الرقمي</h2>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="trust-card-title" data-i18n="whyCard1Title">سرعة فائقة (Performance-First)</h3>
+            <p class="trust-card-desc" data-i18n="whyCard1Desc">لا أستخدم قوالب جاهزة بطيئة مليئة بالأكواد الزائدة؛ أضمن لك سرعة تحميل تمنحك أفضلية في Google وتزيد المبيعات.</p>
+          </div>
+
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card-icon">
+              <i class="fa-solid fa-code-branch"></i>
+            </div>
+            <h3 class="trust-card-title" data-i18n="whyCard2Title">كود نظيف ومنظم للمستقبل</h3>
+            <p class="trust-card-desc" data-i18n="whyCard2Desc">أكتب أكواداً برمجية معيارية يسهل صيانتها وتطويرها في المستقبل بدون أي تعقيد أو مشاكل خفية.</p>
+          </div>
+
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card-icon">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h3 class="trust-card-title" data-i18n="whyCard3Title">تجاوب حقيقي مع كافة الشاشات</h3>
+            <p class="trust-card-desc" data-i18n="whyCard3Desc">موقعك سيبدو مبهراً وسريعاً على أصغر شاشات الهواتف وحتى شاشات الحواسيب المكتبية الكبيرة.</p>
+          </div>
+
+          <div class="trust-card reveal-on-scroll">
+            <div class="trust-card-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3 class="trust-card-title" data-i18n="whyCard4Title">تواصل مباشر والتزام صارم بالمواعيد</h3>
+            <p class="trust-card-desc" data-i18n="whyCard4Desc">تتحدث معي مباشرة كمطور لمشروعك؛ تحديثات مستمرة، وضوح تام في كل مرحلة، وتسليم في الموعد المتفق عليه.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. PROJECT STANDARDS & WHAT I DELIVER
+         ========================================================================== -->
+    <section class="section section-alt" id="standards">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="standardsEyebrow">التزامات الجودة</span>
+          <h2 class="section-title" data-i18n="standardsTitle">ما تستلمه دائماً في كل مشروع</h2>
+        </div>
+
+        <div class="standards-grid">
+          <div class="standard-card reveal-on-scroll">
+            <div class="standard-icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="standard-title" data-i18n="std1Title">+90 مؤشر Google PageSpeed</h3>
+            <p class="standard-desc" data-i18n="std1Desc">ضمان اجتياز مؤشرات الأداء الحيوية وتحقيق درجات متقدمة تعزز ترتيبك في محركات البحث.</p>
+          </div>
+
+          <div class="standard-card reveal-on-scroll">
+            <div class="standard-icon">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <h3 class="standard-title" data-i18n="std2Title">لوحة تحكم سهلة الإدارة</h3>
+            <p class="standard-desc" data-i18n="std2Desc">تعديل النصوص، الصور، والمنتجات بسهولة تامة وبدون الحاجة إلى كتابة أي سطر برمجي.</p>
+          </div>
+
+          <div class="standard-card reveal-on-scroll">
+            <div class="standard-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="standard-title" data-i18n="std3Title">حماية ونسخ احتياطي تلقائي</h3>
+            <p class="standard-desc" data-i18n="std3Desc">تأمين موقعك ضد الثغرات وهجمات الاختراق الشائعة مع إعداد نظام نسخ احتياطي مستمر.</p>
+          </div>
+
+          <div class="standard-card reveal-on-scroll">
+            <div class="standard-icon">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="standard-title" data-i18n="std4Title">فيديو تدريب ودعم ما بعد التسليم</h3>
+            <p class="standard-desc" data-i18n="std4Desc">شرح مصور مخصص لك يوضح كيفية إدارة الموقع مع فترة دعم فني مجاني للإجابة على استفساراتك.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. CONTACT SECTION
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="contactEyebrow">تواصل مباشر</span>
+          <h2 class="section-title" data-i18n="contactTitle">جاهز لبناء موقعك القادم؟ دعنا نبدأ الآن.</h2>
+          <p class="section-desc" data-i18n="contactDesc">
+            سواء كان لديك مشروع جديد، ترغب في إعادة تصميم موقعك الحالي، أو تحتاج استشارة فنية متخصصة، أنا هنا لمساعدتك.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Left: Contact Channels & Status -->
+          <div class="contact-info-panel reveal-on-scroll">
+            <!-- Availability Pill -->
+            <div>
+              <div class="status-pill">
+                <span class="status-dot"></span>
+                <span data-i18n="contactStatusText">متاح حالياً لاستقبال المشاريع الجديدة والتعاقدات</span>
+              </div>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="contact-channels-list">
+              <!-- Email -->
+              <a href="mailto:ahmedhamdybayoumi2006@gmail.com" class="contact-channel-item">
+                <div class="contact-channel-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-channel-details">
+                  <span class="contact-channel-label" data-i18n="contactEmailLabel">البريد الإلكتروني المباشر</span>
+                  <span class="contact-channel-value ltr-protect">ahmedhamdybayoumi2006@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- WhatsApp & Phone -->
+              <a href="https://wa.me/201098935058" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="contact-channel-icon" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-channel-details">
+                  <span class="contact-channel-label" data-i18n="contactPhoneLabel">الهاتف / واتساب</span>
+                  <span class="contact-channel-value ltr-protect">+20 109 893 5058</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-channel-item">
+                <div class="contact-channel-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-channel-details">
+                  <span class="contact-channel-label" data-i18n="contactLocationLabel">الموقع</span>
+                  <span class="contact-channel-value" data-i18n="contactLocationVal">مصر (خدمة العملاء محلياً ودولياً)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div>
+              <span class="footer-heading" style="display: block; margin-bottom: var(--space-3);" data-i18n="footerQuickLinks">شبكات التواصل المهنية</span>
+              <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/ahmed-hamdy-b1620a392" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Ahmedhamdy009" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://x.com/AhmedHa16224863" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Twitter X">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/61565314121039" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ahmed_hamdy_09" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Project Inquiry Form -->
+          <div class="contact-form-panel reveal-on-scroll">
+            <form id="contactForm" novalidate>
+              <div class="form-two-cols">
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="nameInput" class="form-label">
+                    <span data-i18n="formNameLabel">الاسم الكريم</span>
+                    <span class="required-star">*</span>
+                  </label>
+                  <input type="text" id="nameInput" class="form-control" required autocomplete="name" data-i18n-placeholder="formNamePlaceholder" placeholder="اكتب اسمك هنا">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="emailInput" class="form-label">
+                    <span data-i18n="formEmailLabel">البريد الإلكتروني</span>
+                    <span class="required-star">*</span>
+                  </label>
+                  <input type="email" id="emailInput" class="form-control" required autocomplete="email" data-i18n-placeholder="formEmailPlaceholder" placeholder="name@example.com">
+                </div>
+              </div>
+
+              <div class="form-two-cols">
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phoneInput" class="form-label">
+                    <span data-i18n="formPhoneLabel">رقم الهاتف / الواتساب</span>
+                    <span class="required-star">*</span>
+                  </label>
+                  <input type="tel" id="phoneInput" class="form-control" required autocomplete="tel" data-i18n-placeholder="formPhonePlaceholder" placeholder="010xxxxxxxx" maxlength="15">
+                  <span class="form-hint" data-i18n="formPhoneHint">11 رقماً يبدأ بـ 01 (أو كود دولتك)</span>
+                </div>
+
+                <!-- Project Type -->
+                <div class="form-group">
+                  <label for="projectTypeSelect" class="form-label" data-i18n="formTypeLabel">نوع المشروع المطلوب</label>
+                  <select id="projectTypeSelect" class="form-control">
+                    <option value="Custom WordPress Website" data-i18n="formTypeOpt1">تطوير موقع ووردبريس مخصص</option>
+                    <option value="WooCommerce Store" data-i18n="formTypeOpt2">متجر إلكتروني WooCommerce</option>
+                    <option value="Website Redesign" data-i18n="formTypeOpt3">إعادة تصميم وتحديث موقع</option>
+                    <option value="Speed & Performance Optimization" data-i18n="formTypeOpt4">تسريع الأداء ومؤشرات الويب</option>
+                    <option value="Technical SEO" data-i18n="formTypeOpt7">تهيئة محركات البحث (Technical SEO)</option>
+                    <option value="Elementor Pro Design" data-i18n="formTypeOpt8">تصميم احترافي بـ Elementor Pro</option>
+                    <option value="Figma to WordPress" data-i18n="formTypeOpt5">تحويل Figma إلى ووردبريس</option>
+                    <option value="Custom Frontend Development" data-i18n="formTypeOpt6">مشروع واجهات أمامية مخصص</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Budget (Optional) -->
+              <div class="form-group">
+                <label for="budgetSelect" class="form-label" data-i18n="formBudgetLabel">الميزانية المتوقعة (اختياري)</label>
+                <select id="budgetSelect" class="form-control">
+                  <option value="" selected>— حدد النطاق التقديري —</option>
+                  <option value="Under $300" data-i18n="formBudgetOpt1">أقل من $300</option>
+                  <option value="$300 - $600" data-i18n="formBudgetOpt2">$300 - $600</option>
+                  <option value="$600 - $1,200" data-i18n="formBudgetOpt3">$600 - $1,200</option>
+                  <option value="$1,200+" data-i18n="formBudgetOpt4">أكثر من $1,200</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="messageInput" class="form-label">
+                  <span data-i18n="formMessageLabel">تفاصيل المشروع</span>
+                  <span class="required-star">*</span>
+                </label>
+                <textarea id="messageInput" class="form-control" rows="4" required data-i18n-placeholder="formMessagePlaceholder" placeholder="شاركني فكرة مشروعك، المميزات المطلوبة، أو رابط موقعك الحالي..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submitFormBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane rtl-flip"></i>
+                <span data-i18n="formSubmitBtn">إرسال تفاصيل المشروع</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       11. SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div>
+          <a href="#hero" class="brand-link">
+            <img src="assets/monogram.svg" alt="AH Logo" class="brand-monogram-img" width="36" height="36">
+            <div class="brand-text-block">
+              <span class="brand-name">AHMED HAMDY</span>
+              <span class="brand-tagline">WORDPRESS &amp; FRONTEND</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio" data-i18n="footerBio">
+            أحمد حمدي — مطور ووردبريس وواجهات أمامية. أبتكر تجارب ويب سريعة، جذابة، وعالية التحويل تدعم نمو الأعمال والشركات.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footerQuickLinks">روابط سريعة</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" class="footer-nav-link" data-i18n="navHome">الرئيسية</a></li>
+            <li><a href="#about" class="footer-nav-link" data-i18n="navAbout">نبذة عني</a></li>
+            <li><a href="#services" class="footer-nav-link" data-i18n="navServices">الخدمات</a></li>
+            <li><a href="#projects" class="footer-nav-link" data-i18n="navProjects">المشاريع</a></li>
+            <li><a href="#contact" class="footer-nav-link" data-i18n="navContact">تواصل معي</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footerServicesTitle">أبرز الخدمات</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link" data-i18n="srv1Title">تطوير مواقع ووردبريس</a></li>
+            <li><a href="#services" class="footer-nav-link" data-i18n="srv2Title">متاجر WooCommerce</a></li>
+            <li><a href="#services" class="footer-nav-link" data-i18n="srv3Title">Elementor Pro مخصص</a></li>
+            <li><a href="#services" class="footer-nav-link" data-i18n="srv5Title">تسريع الأداء Core Web Vitals</a></li>
+            <li><a href="#services" class="footer-nav-link" data-i18n="srv7Title">تحويل Figma إلى ووردبريس</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p data-i18n="footerRights">جميع الحقوق محفوظة © 2026 أحمد حمدي.</p>
+        <p data-i18n="footerBuiltWith">صُمم وبُني بكود نقي ومعايير أداء فائقة السرعة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       12. FLOATING ACTIONS
+       ========================================================================== -->
+  <div class="floating-actions-wrap">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/201098935058" class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Direct WhatsApp Chat" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="floating-btn floating-scroll-top" id="scrollTopBtn" type="button" aria-label="Back to Top" title="Back to Top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==========================================================================
+       13. CASE STUDY DETAILED MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeCaseStudyBtn" type="button" aria-label="Close Case Study Dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header-banner">
+        <img src="" id="modalCoverImg" alt="Project Cover" class="modal-header-img" loading="lazy">
+        <span class="project-category-badge" id="modalCategoryBadge" style="top: var(--space-4); right: var(--space-4);">CATEGORY</span>
+      </div>
+
+      <div class="modal-content-body">
+        <h2 id="modalProjectTitle" class="section-title" style="margin-bottom: var(--space-2);">Project Title</h2>
+        <p id="modalProjectLead" class="section-desc" style="margin-bottom: var(--space-6);">Project Summary</p>
+
+        <!-- Case Study Problem, Goals, Solution, Result Grid -->
+        <div class="case-study-boxes-grid">
+          <div class="cs-info-box">
+            <h4><i class="fa-solid fa-circle-exclamation text-accent"></i> <span data-i18n="modalProblem">التحدي / المشكلة</span></h4>
+            <p id="modalProblemText">Description</p>
+          </div>
+          <div class="cs-info-box">
+            <h4><i class="fa-solid fa-bullseye text-accent"></i> <span data-i18n="modalGoals">الأهداف المحددة</span></h4>
+            <p id="modalGoalsText">Goals</p>
+          </div>
+          <div class="cs-info-box">
+            <h4><i class="fa-solid fa-laptop-code text-accent"></i> <span data-i18n="modalApproach">النهج والتنفيذ البرمجي</span></h4>
+            <p id="modalApproachText">Approach</p>
+          </div>
+          <div class="cs-info-box cs-highlight-box">
+            <h4><i class="fa-solid fa-circle-check text-accent"></i> <span data-i18n="modalResult">النتائج المحققة والأثر</span></h4>
+            <p id="modalResultText">Result</p>
+            <div class="impact-metrics-row">
+              <div class="impact-metric" id="modalLighthouseScore" title="Google Lighthouse Score">98/100</div>
+              <div class="impact-metric-secondary">
+                <i class="fa-solid fa-stopwatch text-accent"></i>
+                <span id="modalLoadTimeVal">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: var(--space-4); margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border);">
+          <a href="#" id="modalVisitLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square rtl-flip"></i>
+            <span data-i18n="modalVisitSite">مشاهدة الموقع الحي</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js?v=3.0"></script>
+  <script src="js/projects-data.js?v=3.0"></script>
+  <script src="js/main.js?v=3.0"></script>
+</body>
+</html>

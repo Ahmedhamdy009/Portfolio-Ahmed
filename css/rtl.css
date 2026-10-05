@@ -1,0 +1,90 @@
+/* ==========================================================================
+   RTL STYLESHEET — ARABIC LOCALIZATION
+   Bespoke, Natural Bidirectional Experience for Ahmed Hamdy
+   ========================================================================== */
+
+html[dir="rtl"] {
+  --font-current: var(--font-family-ar);
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-current);
+}
+
+/* Typography tweaks for Arabic */
+html[dir="rtl"] .hero-headline,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .about-quote,
+html[dir="rtl"] .project-title {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+/* Icon Flips for directional arrows */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .btn:hover .rtl-flip {
+  transform: scaleX(-1) translateY(-1px);
+}
+
+/* Preserve LTR for phone numbers, emails, code */
+html[dir="rtl"] .ltr-protect,
+html[dir="rtl"] .contact-channel-value[href^="tel:"],
+html[dir="rtl"] .contact-channel-value[href^="mailto:"],
+html[dir="rtl"] .stat-number,
+html[dir="rtl"] .service-index,
+html[dir="rtl"] .process-number,
+html[dir="rtl"] .impact-metric {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* Floating Actions in RTL (move to bottom-left) */
+html[dir="rtl"] .floating-actions-wrap {
+  right: auto;
+  left: var(--space-6);
+}
+
+/* Floating Hero Badge in RTL */
+html[dir="rtl"] .floating-hero-badge {
+  right: auto;
+  left: var(--space-4);
+}
+
+/* Modal Close Button */
+html[dir="rtl"] .modal-close-btn {
+  right: auto;
+  left: var(--space-4);
+}
+
+/* Contact channel hover transition */
+html[dir="rtl"] .contact-channel-item:hover {
+  transform: translateX(-4px);
+}
+
+/* Form input alignment */
+html[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-control[type="tel"],
+html[dir="rtl"] .form-control[type="email"] {
+  text-align: right;
+  direction: ltr;
+}
+
+/* About Quote Border Line */
+html[dir="rtl"] .about-card-box::before {
+  background: linear-gradient(270deg, var(--accent) 0%, transparent 100%);
+}
+
+/* Breadcrumbs / tags spacing */
+html[dir="rtl"] .service-cta-link {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
